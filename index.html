@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Company Security Portal</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .container {
+      background-color: white;
+      padding: 2rem;
+      border-radius: 8px;
+      max-width: 600px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    h1 {
+      color: #1e3a8a;
+    }
+
+    button {
+      background-color: #1e40af;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .reveal {
+      display: none;
+      margin-top: 20px;
+      text-align: left;
+      color: #111827;
+    }
+
+    .reveal strong {
+      color: #b91c1c;
+      font-size: 1.2rem;
+    }
+
+    ul {
+      text-align: left;
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Company Security Portal</h1>
+    <p>Please confirm your acknowledgement of the latest IT policy update.</p>
+    <button onclick="revealPhish()">Acknowledge Policy</button>
+
+    <div id="phishMessage" class="reveal">
+      <p><strong>🎣 You’ve been phished!</strong></p>
+      <p>This was a simulated phishing test. No data was collected.</p>
+      <p>Here are some tips to stay safe from real phishing attacks:</p>
+      <ul>
+        <li>✅ Verify email senders before clicking anything</li>
+        <li>✅ Hover over links to see where they really go</li>
+        <li>✅ Never share credentials through unverified sites</li>
+        <li>✅ Report suspicious emails to IT or security teams</li>
+        <li>✅ If unsure — STOP and ask before clicking</li>
+      </ul>
+      <p><strong>Stay sharp. Stay cyber safe. 🔐</strong></p>
+    </div>
+  </div>
+
+  <script>
+    function revealPhish() {
+      document.getElementById('phishMessage').style.display = 'block';
+    }
+  </script>
+</body>
+</html>
